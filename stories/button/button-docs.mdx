@@ -1,0 +1,87 @@
+import { createButton } from "./button.js";
+import * as ButtonStories from "./button.stories.js";
+import {
+  Meta,
+  Canvas,
+  Title,
+  Description,
+  Story,
+  Controls,
+  Markdown,
+  ColorPalette,
+  ColorItem,
+  ArgTypes,
+} from "@storybook/blocks";
+
+import Readme from "./button.md?raw";
+
+<Meta of={ButtonStories} />
+
+<Title>Button Component</Title>
+
+<Description />
+
+<Canvas />
+
+<Controls />
+
+<Markdown>{Readme}</Markdown>
+
+## Color Palette
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Purple shades"
+    colors={{
+      Primary_50: "#f3e5f5",
+      Primary_300: "#ba68c8",
+      Primary_600: "#8e24aa",
+    }}
+  />
+  <ColorItem
+    title="Neutral"
+    subtitle="Grey shades"
+    colors={{
+      Neutral_50: "#fafafa",
+      Neutral_300: "#e0e0e0",
+      Neutral_600: "#757575",
+    }}
+  />
+  <ColorItem
+    title="Info"
+    subtitle="Blue shades"
+    colors={{
+      Info_50: "#e3f2fd",
+      Info_300: "#64b5f6",
+      Info_600: "#1e88e5",
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="Turquoise shades"
+    colors={{
+      Success_50: "#e0f7fa",
+      Success_300: "#4dd0e1",
+      Success_600: "#00acc1",
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="Amber shades"
+    colors={{
+      Warning_50: "#fff3e0",
+      Warning_300: "#ffb74d",
+      Warning_600: "#fb8c00",
+    }}
+  />
+  <ColorItem
+    title="Error"
+    subtitle="Red shades"
+    colors={{
+      Error_50: "#ffebee",
+      Error_300: "#e57373",
+      Error_600: "#e53935",
+    }}
+  />
+</ColorPalette>

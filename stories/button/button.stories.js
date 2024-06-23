@@ -1,6 +1,8 @@
 import { createButton } from "./button";
 
 export default {
+  // tags: ["autodocs"],
+  component: createButton,
   title: "Design System/Atoms/Button",
   argTypes: {
     label: {
@@ -8,21 +10,32 @@ export default {
       control: {
         type: "text",
       },
+      description: "The label of button",
     },
 
     style: {
       name: "style",
       options: ["filled", "outline"],
       control: {
-        type: "radio",
+        type: "select",
       },
+      description: "Define what style use filled or outline",
     },
 
     size: {
-      name: "style",
+      name: "size",
       options: ["small", "medium", "large"],
       control: {
-        type: "radio",
+        type: "select",
+      },
+      type: "number",
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "This component represents a button with customizable styles.",
       },
     },
   },
