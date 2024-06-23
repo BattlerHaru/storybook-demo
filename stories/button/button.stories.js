@@ -39,6 +39,14 @@ export default {
       },
     },
   },
+  decorators: [
+    (story) => {
+      const decorator = document.createElement("div");
+      decorator.appendChild(story());
+      decorator.style.margin = "24";
+      return decorator;
+    },
+  ],
 };
 
 const Template = ({ label, ...args }) => {
