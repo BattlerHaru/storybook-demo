@@ -2,5 +2,8 @@
   "name": "storybook-demo",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/cli": "^8.1.10"
+  }
 }
