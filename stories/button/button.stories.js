@@ -1,4 +1,5 @@
 import { createButton } from "./button";
+import { withActions } from "@storybook/addon-actions/decorator";
 
 export default {
   // tags: ["autodocs"],
@@ -30,6 +31,11 @@ export default {
       },
       type: "number",
     },
+
+    onClick: {
+      description: "Event",
+      action: "clicked",
+    },
   },
   parameters: {
     docs: {
@@ -37,6 +43,22 @@ export default {
         component:
           "This component represents a button with customizable styles.",
       },
+    },
+    actions: {
+      handles: ["mouseover"],
+    },
+    backgrounds: {
+      default: "Black Friday",
+      values: [
+        {
+          name: "Black Friday",
+          value: "#000000",
+        },
+        {
+          name: "default",
+          value: "#FFFFFF",
+        },
+      ],
     },
   },
   decorators: [
@@ -46,6 +68,7 @@ export default {
       decorator.style.margin = "24";
       return decorator;
     },
+    withActions,
   ],
 };
 
