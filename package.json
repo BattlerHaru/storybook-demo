@@ -5,5 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "@storybook/cli": "^8.1.10"
+  },
+  "dependencies": {
+    "vite": "^5.3.1"
   }
 }
